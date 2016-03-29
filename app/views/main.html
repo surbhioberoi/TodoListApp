@@ -1,0 +1,35 @@
+<div class="taskbox">
+    <div class="row" id="topbtns">
+        <div class="col-md-12 col-xs-12 text-center">
+            <a class="btn btn-primary" href="#/about">
+                <i class="fa fa-plus"></i> &nbsp;Add task
+            </a>
+            <button class="btn btn-danger" ng-click="clearCompletedTasks()">
+                <i class="fa fa-trash"></i> &nbsp;Clear finished
+            </button>
+        </div>
+    </div>
+    <div class="taskcontainer">
+        <div class="row" ng-repeat="task in tasks">
+            <div class="col-md-6 col-xs-6">
+                <div class="task">
+                    <input type="checkbox" ng-model="task.completed" id="taskcheckbox">
+                        <span class="taskname" ng-class="{taskcompleted: task.completed}" ng-dblclick="editTask($index)">{{task.detail}}</span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-4 text-center small" ng-dblclick="editTask($index)" ng-class="{taskcompleted: task.completed}">
+      {{task.date | date: 'mediumDate'}}
+    </div>
+                <div class="col-md-1 col-xs-1 text-center hidden-xs">
+                    <button class="btn btn-default btn-xs" ng-click="editTask($index)">
+                        <i class="fa fa-pencil"></i>
+                    </button>
+                </div>
+                <div class="col-md-1 col-xs-1 text-center">
+                    <button class="btn btn-default btn-xs" ng-click="deleteTask($index)">
+                        <i class="fa fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>

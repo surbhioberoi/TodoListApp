@@ -1,0 +1,31 @@
+<div class="taskbox">
+<div class="row">
+ <div class="col-md-12 col-xs-12 text-center">
+ 	Add/Edit task
+ </div>
+</div>
+<div class="row">
+	<div class="col-md-3"></div>
+   <div class="col-md-6 col-xs-12 text-center">
+          <input type="text" name="todo" class="form-control addtaskform" placeholder="task details" ng-model="newTask">
+     </div>
+    <div class="col-md-3"></div>
+</div>
+<div class="row">
+	<div class="col-md-3"></div>
+     <div class="col-md-6 col-xs-12 text-center">
+          <input type="text" class="form-control addtaskform" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="datePickerOpen" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" ng-click="toggleDatePicker()"/>
+   </div>
+   <div class="col-md-3"></div>
+</div>
+<div class="row">
+	<div class="col-md-3"></div>
+   <div class="col-md-3 col-xs-6 text-center">
+   	<button class="btn btn-primary addtaskform" ng-click="addTask()">Add task</button>
+   </div>
+   <div class="col-md-3 col-xs-6 text-center">
+   	<button class="btn btn-default addtaskform" ng-click="back()">Back</button>
+   </div>
+   <div class="col-md-3"></div>
+ </div>
+</div>

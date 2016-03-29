@@ -1,0 +1,49 @@
+body {
+  font-family: 'Handlee', cursive;
+  background-color: #fff;
+  font-size: 25px;
+ 
+}
+
+.taskcompleted {
+  text-decoration: line-through;
+}
+
+.addtaskform {
+  margin: 20px;
+}
+
+.taskcontainer {
+  width: 600px;
+  margin: auto;
+  margin-top: 30px;
+
+}
+
+.small {
+  font-size: 18px;
+}
+
+.taskbox {
+  border: solid 1px black;
+  width: 700px;
+  margin: auto;
+  padding: 30px;
+  background-color: #FAF2EF;
+}
+
+
+@media screen and (max-width: 700px) {
+  .taskbox {
+    width: 100%;
+    padding: 5px;
+  }
+  .taskcontainer {
+    width: 100%;
+  }
+  .addtaskform {
+    margin: 0px;
+    margin-top: 10px;
+  }
+
+}
